@@ -17,7 +17,7 @@ $('pickWeapon').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b
 $('pickTalent').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.classList.contains('lock'))return toast('还没解锁哦');const k=b.dataset.t,i=sel.talents.indexOf(k);
  if(i>=0)sel.talents.splice(i,1);else{if(sel.talents.length>=2)sel.talents.shift();sel.talents.push(k)}renderStart()};
 $('unlockAll').onchange=renderStart;
-$('goBtn').onclick=()=>{Game.newGame(sel);$('start').classList.add('hidden');$('end').classList.add('hidden');$('hMe').textContent=HEROES[sel.hero].ic;toast('天亮了，走到虚线框旁边建造，保护 UHI！')};
+$('goBtn').onclick=()=>{Game.newGame(sel);$('start').classList.add('hidden');$('end').classList.add('hidden');$('hMe').textContent=HEROES[sel.hero].ic+' '+HEROES[sel.hero].name;toast('天亮了，走到虚线框旁边建造，保护 UHI！')};
 $('againBtn').onclick=()=>{$('end').classList.add('hidden');renderStart();$('start').classList.remove('hidden')};
 let toastT;function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),2200)}
 Game.hooks.toast=toast;

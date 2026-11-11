@@ -1,7 +1,7 @@
 // 保卫UHI — 游戏数据（武器 / 天赋 / 建筑 / 敌人 / 地图 / 每晚的敌人）
 const MAP_W=34,MAP_H=34,HOME={x:17,y:17,r:1.4};
 // 玩家：徐工 240 桩机（两种颜色，以后双人各开一台）
-const HEROES={yellow:{name:'桩机1号',ic:'🏗️',col:'#f2b705'},blue:{name:'桩机2号',ic:'🏗️',col:'#3a8fd9'}};
+const HEROES={yellow:{name:'楚剑',ic:'🏗️',col:'#f2b705'},blue:{name:'John',ic:'🏗️',col:'#3a8fd9'}};
 const DIFF=1.15; // 难度：敌人血量和攻击 ×1.15
 const WEAPONS={
  pile:{name:'桩锤',ic:'🔨',desc:'锤人！近身连续砸',kind:'melee',range:1.6,dmg:21,cd:.5,maxHit:4,
